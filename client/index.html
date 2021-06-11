@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>UGO-checkout</title>
+    <meta name="description" content="A demo of Stripe Payment Intents" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="togethere-background"></div>
+    <div class="sr-root">
+      <div class="sr-main">
+        <header class="sr-header">
+          <div class="sr-header__logo"></div>
+        </header>
+        <h1>プランを選択</h1>
+
+        <div class="price-table-container">
+          <section class="plan_0">
+            <img
+              src="img/friend.jpg"
+              width="240"
+              height="158"
+            />
+            <br>
+            <div class="name">UGO Friend</div>
+            <div class="price">¥1,000</div>
+            <div class="duration">月額</div>
+            <button id="basic-plan-btn">選択</button>
+          </section>
+          <section class="plan_1">
+            <img
+              src="img/family.jpg"
+              width="240"
+              height="158"
+            />
+            <br>
+            <div class="name">UGO Family</div>
+            <div class="price">¥30,000</div>
+            <div class="duration">月額</div>
+            <button id="pro-plan-btn">選択</button>
+          </section>
+          <section class="plan_2">
+            <img
+              src="img/family.jpg"
+              width="240"
+              height="158"
+            />
+            <br>
+            <div class="name">UGO Vibes</div>
+            <div class="price">￥10,000</div>
+            <div class="duration">月額</div>
+            <button id="vibes-plan-btn">選択</button>
+          </section>
+        </div>
+        <div id="error-message"></div>
+        
+      </div>
+    </div>
+    <script>
+      var url = location.href;
+      var url_array = url.split('');
+      var plan_num = url_array[url.indexOf('#') + 1];
+
+      $('.plan_0').hide();
+      $('.plan_1').hide();
+      $('.plan_2').hide();
+      
+      $('.plan_' + plan_num).show();
+    </script>
+  </body>
+</html>

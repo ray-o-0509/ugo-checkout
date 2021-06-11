@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>UGO-checkout</title>
+    <meta name="description" content="A demo of Stripe Payment Intents" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+
+    <script src="./success.js" defer></script>
+  </head>
+
+  <body>
+    <div class="togethere-background"></div>
+    <div class="sr-root">
+      <div class="sr-main">
+        <header class="sr-header">
+          <div class="sr-header__logo"></div>
+        </header>
+        <div class="sr-payment-summary completed-view">
+            <h1>UGOのサポート、どうもありがとうございます！</h1>
+          </div>
+          <div class="completed-view-section">
+            <p style="line-height: 1.5em;">
+              支払いが完了しました。<br>
+              登録ありがとうございます。<br>
+              <br>
+              UGO実行委員会から確認メールが2〜3営業日以内に送られます。<br>
+              
+              （万一送られなかった場合は、ugoshinokubougo@gmail.comにご連絡ください）
+            </p>
+            <pre style="font-size: 0;">
+
+            </pre>
+            <button onclick="window.location.href = 'https://shinokubo-ugo.com/support/';">戻る</button>
+
+            <form id="manage-billing-form" style="width: 0;opacity: 0; pointer-events: none;">
+              <button>Manage Billing</button>
+            </form>
+          </div>
+        </div>
+        <div class="sr-content">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
